@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://Scenes/Photo.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Fonts/arial.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Scenes/MainFamilyTree.gd" type="Script" id=3]
 
 [sub_resource type="DynamicFont" id=1]
 size = 40
@@ -10,6 +11,7 @@ font_data = ExtResource( 2 )
 [node name="FamilyTree" type="Control"]
 anchor_right = 1.0
 anchor_bottom = 1.0
+script = ExtResource( 3 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
@@ -26,12 +28,29 @@ margin_right = 264.0
 margin_bottom = 8.0
 rect_scale = Vector2( 0.3, 0.3 )
 
+[node name="Button2" type="Button" parent="Photo"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 320.0
+margin_top = 80.0
+margin_right = 720.0
+margin_bottom = 480.0
+
 [node name="Photo2" parent="." instance=ExtResource( 1 )]
 margin_left = 448.0
 margin_top = 8.0
 margin_right = 448.0
 margin_bottom = 8.0
 rect_scale = Vector2( 0.3, 0.3 )
+
+[node name="Button3" type="Button" parent="Photo2"]
+self_modulate = Color( 0, 0, 0, 0 )
+margin_left = 320.0
+margin_top = 80.0
+margin_right = 720.0
+margin_bottom = 480.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Photo3" parent="." instance=ExtResource( 1 )]
 margin_left = 568.0
@@ -40,12 +59,32 @@ margin_right = 568.0
 margin_bottom = 184.0
 rect_scale = Vector2( 0.3, 0.3 )
 
+[node name="Button4" type="Button" parent="Photo3"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 320.0
+margin_top = 80.0001
+margin_right = 720.0
+margin_bottom = 480.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Photo4" parent="." instance=ExtResource( 1 )]
 margin_left = 144.0
 margin_top = 184.0
 margin_right = 144.0
 margin_bottom = 184.0
 rect_scale = Vector2( 0.3, 0.3 )
+
+[node name="Button5" type="Button" parent="Photo4"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 320.0
+margin_top = 80.0
+margin_right = 720.0
+margin_bottom = 480.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Photo5" parent="." instance=ExtResource( 1 )]
 margin_left = 264.0
@@ -54,12 +93,32 @@ margin_right = 264.0
 margin_bottom = 360.0
 rect_scale = Vector2( 0.3, 0.3 )
 
+[node name="Button6" type="Button" parent="Photo5"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 320.0
+margin_top = 80.0001
+margin_right = 720.0
+margin_bottom = 480.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Photo6" parent="." instance=ExtResource( 1 )]
 margin_left = 24.0
 margin_top = 360.0
 margin_right = 24.0
 margin_bottom = 360.0
 rect_scale = Vector2( 0.3, 0.3 )
+
+[node name="Button7" type="Button" parent="Photo6"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 320.0
+margin_top = 80.0
+margin_right = 720.0
+margin_bottom = 480.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Photo7" parent="." instance=ExtResource( 1 )]
 margin_left = 688.0
@@ -68,12 +127,32 @@ margin_right = 688.0
 margin_bottom = 360.0
 rect_scale = Vector2( 0.3, 0.3 )
 
+[node name="Button8" type="Button" parent="Photo7"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 320.0
+margin_top = 80.0
+margin_right = 720.0
+margin_bottom = 480.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="Photo8" parent="." instance=ExtResource( 1 )]
 margin_left = 448.0
 margin_top = 360.0
 margin_right = 448.0
 margin_bottom = 360.0
 rect_scale = Vector2( 0.3, 0.3 )
+
+[node name="Button9" type="Button" parent="Photo8"]
+self_modulate = Color( 1, 1, 1, 0 )
+margin_left = 320.0
+margin_top = 80.0
+margin_right = 720.0
+margin_bottom = 480.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="FamilyTreeText" type="Label" parent="."]
 margin_left = 16.0
@@ -82,3 +161,16 @@ margin_right = 225.0
 margin_bottom = 62.0
 custom_fonts/font = SubResource( 1 )
 text = "Family Tree"
+
+[node name="AddOrDelete" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Photo/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="pressed" from="Photo2/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Photo3/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="pressed" from="Photo4/Button5" to="." method="_on_Button5_pressed"]
+[connection signal="pressed" from="Photo6/Button7" to="." method="_on_Button7_pressed"]
+[connection signal="pressed" from="Photo7/Button8" to="." method="_on_Button8_pressed"]
