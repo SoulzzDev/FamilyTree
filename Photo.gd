@@ -24,3 +24,8 @@ func _on_FileDialog_file_selected(path):
 func _physics_process(delta):
 	if texture_placed == true:
 		Frame.visible = false
+
+
+#func _on_Transition_pressed():
+#	if get_tree().get_root().get_node("Photo2"):
+#		print("hello")

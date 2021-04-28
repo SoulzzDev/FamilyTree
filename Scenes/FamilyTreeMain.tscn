@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/Photo.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scenes/FamilyTreeMain.gd" type="Script" id=2]
+
+[node name="FamilyTreeMain" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Photo" parent="." instance=ExtResource( 1 )]
+margin_left = 312.0
+margin_right = 312.0
+rect_scale = Vector2( 0.4, 0.4 )
+
+[node name="FirstLineRight" type="Node2D" parent="."]
+position = Vector2( 640, 64 )
+
+[node name="PlusRightF" type="Button" parent="FirstLineRight"]
+margin_right = 64.0
+margin_bottom = 64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MinusRightF" type="Button" parent="FirstLineRight"]
+margin_left = 88.0
+margin_right = 152.0
+margin_bottom = 64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FirstLineLeft" type="Node2D" parent="."]
+position = Vector2( 336, 64 )
+
+[node name="PlusLeftF" type="Button" parent="FirstLineLeft"]
+margin_right = 64.0
+margin_bottom = 64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MinusLeftF" type="Button" parent="FirstLineLeft"]
+margin_left = -88.0
+margin_right = -24.0
+margin_bottom = 64.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
