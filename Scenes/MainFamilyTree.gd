@@ -2,19 +2,25 @@ extends Control
 
 
 func _on_Button2_pressed():
-	print("works!")
+	Variables.transition_pressed = true
 
 func _on_Button3_pressed():
-	pass # Replace with function body.
+	Variables.transition_pressed = true
 
 func _on_Button4_pressed():
-	pass # Replace with function body.
+	Variables.transition_pressed = true
 
 func _on_Button5_pressed():
-	pass # Replace with function body.
+	Variables.transition_pressed = true
 
 func _on_Button7_pressed():
-	pass # Replace with function body.
+	Variables.transition_pressed = true
 
 func _on_Button8_pressed():
-	pass # Replace with function body.
+	Variables.transition_pressed = true
+
+func _on_Button9_pressed():
+	Variables.transition_pressed = true
+
+func _on_Button6_pressed():
+	Variables.transition_pressed = true
